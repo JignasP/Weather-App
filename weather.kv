@@ -1,0 +1,169 @@
+
+<FloatLayout>:
+
+    Image:
+        source: str(app.sky)
+        allow_stretch: True
+
+
+    Label:
+        font_name: 'Dubai-font/Regular.ttf'
+        text:str(app.ui_data[0]['city'])
+
+        size_hint: 0.3,0.7
+        pos_hint: {"x":0.18,"y":0.42}
+        font_size: 70
+        color:0.3,0.3,0.3,0.7
+    Image:
+        source: str( app.hill)
+        allow_stretch: True
+
+
+### Description
+
+    Label:
+        font_name: 'Dubai-font/Regular.ttf'
+        text:str(app.ui_data[0]['we_description'])
+
+        size_hint: 0.3,0.7
+        pos_hint: {"x":0.25,"y":0.33}
+        font_size: 30
+        color:0,0,0,1
+
+### Temperature
+
+    Label:
+        font_name: 'Dubai-font/Bold.ttf'
+        text:str(app.ui_newdata[0]['temp'])
+
+        size_hint: 0.3,0.7
+        pos_hint: {"x":0.1,"y":0.25}
+        font_size: 70
+        color:0,0,0,1
+
+#######################################################################
+
+# Grid
+
+    GridLayout:
+        rows:2
+        spacing:5
+        size_hint: 0.7,0.2
+        pos_hint: {"x":0.1,"y":0.2}
+
+
+#### Row 1
+
+        BoxLayout:
+            orientation:"horizontal"
+            spacing:20
+
+### Wind
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/wind.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text:str(round(app.ui_data[0]['speed'])) +'Km/h '+ app.ui_newdata[0]['wind_dir']
+                    font_size: 30
+                    color:0,0,0,1
+
+
+### Pressure
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/pressure.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text:str(app.ui_data[0]['pressure']) + 'hPa'
+                    font_size: 30
+                    color:0,0,0,1
+
+
+### Humidity
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/humidity.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text:str(app.ui_data[0]['humidity']) + '%    '
+                    font_size: 30
+                    color:0,0,0,1
+
+#######################################################################
+
+#### Row 2
+        BoxLayout:
+            orientation:"horizontal"
+            spacing:20
+
+### Temperature Min
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/temp.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text: 'Min' + str(app.ui_newdata[0]['temp_min'])+'°C'
+                    font_size: 30
+                    color:0,0,0,1
+
+### Temperature Max
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/temp.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text: 'Max' + str(app.ui_newdata[0]['temp_max'])+'°C'
+                    font_size: 30
+                    color:0,0,0,1
+
+
+### SunRise
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/rise.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text: str(app.ui_newdata[0]['time_sunrise'])[-8:-3]
+                    font_size: 30
+                    color:0,0,0,1
+
+### SunSet
+
+            BoxLayout:
+
+                Image:
+                    source: 'icons/set.png'
+                    size_hint: 0.3,1
+
+                Label:
+                    font_name: 'Dubai-font/Regular.ttf'
+                    text: str(app.ui_newdata[0]['time_sunset'])[-8:-3]
+                    font_size: 30
+                    color:0,0,0,1
+
+#######################################################################
