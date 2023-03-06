@@ -1,7 +1,7 @@
 # Weather-App
  A live weather app with dynamic UI built using Kivy, OpenWeatherAPI and ipAPI
 
- ![](demo/demo1.PNG)
+ ![](https://raw.githubusercontent.com/JignasP/Weather-App/main/demo/demo1.png)
 
 ### Setup
 In order to run the application , you'll need to make sure the following libraries are installed:
@@ -15,5 +15,5 @@ The application will display the weather of your location based on your IP addre
 
 The background of the app changes based on the time and weather of your location.
 
-![](demo/demo2.PNG)
-![](demo/demo3.PNG)
+![](https://raw.githubusercontent.com/JignasP/Weather-App/main/demo/demo2.png)
+![](https://raw.githubusercontent.com/JignasP/Weather-App/main/demo/demo3.png)
