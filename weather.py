@@ -1,3 +1,6 @@
+# Weather App
+# Copyright (c) 2023, Jignas Paturu
+
 from datetime import datetime
 import json
 from urllib import request
