@@ -20,8 +20,8 @@ class API():
 
         'city': 'City',
         'visibility': 0000,
-        'zip': 560043,
-        'country': 'in',
+        'zip': 000000,
+        'country': 'uk',
 
         'we_main': 'Clouds',
         'we_description': 'clear skys',
@@ -53,7 +53,7 @@ class API():
     DATA[0]['zip'] = ip_data['postal']
     DATA[0]['utc_offset'] = int( ip_data['utc_offset'])
 
-    API_KEY = "732833a34bdd944fb2477423de2a2473"
+    API_KEY = "Enter API Key Here!!!"
 
     temp_a= f"http://api.openweathermap.org/data/2.5/weather?zip={DATA[0]['zip']},{DATA[0]['country']}&appid={API_KEY}"
     print("link=",temp_a)
